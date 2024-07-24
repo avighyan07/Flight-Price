@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.username.label }}<br>
+        {{ form.username }}<br>
+        {% for error in form.username.errors %}
+            <span>{{ error }}</span>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.email.label }}<br>
+        {{ form.email }}<br>
+        {% for error in form.email.errors %}
+            <span>{{ error }}</span>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.gender.label }}<br>
+        {{ form.gender }}<br>
+        {% for error in form.gender.errors %}
+            <span>{{ error }}</span>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.dob.label }}<br>
+        {{ form.dob }}<br>
+        {% for error in form.dob.errors %}
+            <span>{{ error }}</span>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.password.label }}<br>
+        {{ form.password }}<br>
+        {% for error in form.password.errors %}
+            <span>{{ error }}</span>
+        {% endfor %}
+    </div>
+    <div>
+        {{ form.confirm_password.label }}<br>
+        {{ form.confirm_password }}<br>
+        {% for error in form.confirm_password.errors %}
+            <span>{{ error }}</span>
+        {% endfor %}
+    </div>
+    <div>{{ form.submit() }}</div>
+</form>
+{% endblock content %}
